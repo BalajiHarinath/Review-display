@@ -24,10 +24,23 @@ const Review = ({ Name, Job, Data }) => {
     return getIndex(curIndex);
   }
 
+  function RandomPerson() {
+    let curIndex = index;
+    let newIndex = Math.floor(Math.random() * Data.length);
+    if (newIndex === curIndex) {
+      if (newIndex === Data.length - 1) newIndex = curIndex - 1;
+      else {
+        newIndex = curIndex + 1;
+      }
+    } else if (newIndex === curIndex) console.log(newIndex);
+    console.log(newIndex);
+    return newIndex;
+  }
+
   return (
     <section className="container">
       <div className="img-container">
-        <img src={image} alt={name} />
+        <img src={image} alt={Name[index]} />
       </div>
       <div className="name-job">
         <p className="name">{Name[index]}</p>
@@ -47,7 +60,10 @@ const Review = ({ Name, Job, Data }) => {
         </button>
       </div>
       <div className="surprise-me">
-        <button className="button-surprise">
+        <button
+          onClick={() => setIndex(RandomPerson)}
+          className="button-surprise"
+        >
           <b>Surprise Me</b>
         </button>
       </div>

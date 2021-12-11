@@ -35,7 +35,7 @@ h1 {
   justify-content: center;
   box-shadow: 1px 1px 1px 1px gray;
   background-color: white;
-  max-width: 70%;
+  max-width: 80%;
 }
 .name {
   font-size: large;
@@ -68,7 +68,7 @@ p {
   max-width: 400px;
   text-align: left;
   color: rgb(112, 111, 111);
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .img-container {
   position: relative;
